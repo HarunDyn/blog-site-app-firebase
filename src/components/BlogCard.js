@@ -47,7 +47,7 @@ export default function CardComp({ item }) {
     } else {
       if (!currentUser) {
         errorNote("Login for Details");
-        navigate("/login");
+        navigate("/register");
       } else {
         navigate(`/details/${id}`);
       }

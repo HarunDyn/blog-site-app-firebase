@@ -51,7 +51,6 @@ export default function SignUp() {
       await updateProfile(auth.currentUser, {
         displayName,
       }).then(() => {
-        console.log("girdi mi");
         successNote("Successfully Sign Up");
         navigate("/");
       });
