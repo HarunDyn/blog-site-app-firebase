@@ -19,7 +19,6 @@ function Comment({ item, currentId, indexField, data }) {
   const { currentUser } = React.useContext(AuthContext);
 
   const deleteComment = async () => {
-    console.log(item.countComment);
     updateDoc(docRef, { countComment: data.countComment - 1 });
     const updateValue = data.comment.filter((com) => {
       return com.commentId !== item.commentId;

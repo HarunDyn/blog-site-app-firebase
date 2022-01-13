@@ -41,7 +41,6 @@ export default function Details(props) {
       deleteDoc(docRef);
       errorNote("Deleted item.. ");
       navigate("/");
-      console.log(data);
     } else {
       alert("You are not authorized");
     }
@@ -52,7 +51,6 @@ export default function Details(props) {
       currentUser.displayName[0] === value.displayName
     ) {
       navigate(`/update/${value.id}`);
-      console.log(data);
     } else {
       console.log(currentUser.displayName, value.displayName);
       alert("You are not authorized");
@@ -244,13 +242,13 @@ export default function Details(props) {
 
       <Box>
         {value.comment.map((valueComments, index) => {
-          console.log(index);
           return (
             <Comment
               item={valueComments}
               currentId={currentId}
               indexField={index}
               data={value}
+              id={currentId}
             />
           );
         })}

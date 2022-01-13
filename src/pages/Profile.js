@@ -6,7 +6,6 @@ import { AuthContext } from "../contexts/AuthContext";
 
 export default function BasicCard() {
   const { currentUser } = React.useContext(AuthContext);
-  console.log(currentUser);
   return (
     <Card
       sx={{

@@ -50,12 +50,11 @@ export default function SignInSide() {
   const loginWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
     try {
-      await signInWithPopup(auth, provider).then((result) => {
-        console.log(result);
+      await signInWithPopup(auth, provider).then(() => {
+        successNote("Successfully login");
+        setGoogle(true);
+        navigate("/");
       });
-      successNote("Successfully login");
-      setGoogle(true);
-      navigate("/");
     } catch (err) {
       console.log(err);
     }

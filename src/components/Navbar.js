@@ -24,7 +24,7 @@ const ResponsiveAppBar = () => {
   const { setGoogle } = React.useContext(BlogContext);
 
   const { currentUser } = React.useContext(AuthContext);
-  const [setAnchorElNav] = React.useState(null);
+  // const [setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   // const handleOpenNavMenu = (event) => {
@@ -36,7 +36,7 @@ const ResponsiveAppBar = () => {
   };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+    // setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
@@ -44,7 +44,6 @@ const ResponsiveAppBar = () => {
   };
 
   const handleNavigation = (setting) => {
-    console.log(typeof setting);
     if (setting === "Login") {
       navigate("/login");
     } else if (setting === "Register") {
@@ -105,7 +104,7 @@ const ResponsiveAppBar = () => {
                 <Avatar alt="Harun Dayan" sx={{ bgcolor: green[700] }}>
                   {!currentUser ? (
                     <AccountCircleIcon />
-                  ) : currentUser.displayName.length > 2 ? (
+                  ) : currentUser.displayName.lenght > 2 ? (
                     currentUser.displayName[0]
                   ) : currentUser ? (
                     currentUser.displayName

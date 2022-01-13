@@ -25,12 +25,12 @@ const UpdateBlog = () => {
     e.preventDefault();
     const displayName = currentUser.displayName;
 
-    console.log({
-      title: title,
-      url: url,
-      content: content,
-      displayName: currentUser.displayName,
-    });
+    // console.log({
+    //   title: title,
+    //   url: url,
+    //   content: content,
+    //   displayName: currentUser.displayName,
+    // });
 
     updateDoc(docRef, {
       title,

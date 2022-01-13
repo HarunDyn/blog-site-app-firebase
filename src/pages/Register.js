@@ -50,10 +50,11 @@ export default function SignUp() {
       await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(auth.currentUser, {
         displayName,
+      }).then(() => {
+        console.log("girdi mi");
+        successNote("Successfully Sign Up");
+        navigate("/");
       });
-      successNote("Successfully Sign Up");
-      // console.log(auth.currentUser);
-      navigate("/");
     } catch (err) {
       alert(err.message);
     }

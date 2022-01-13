@@ -38,7 +38,6 @@ export default function CardComp({ item }) {
   } = {
     ...item,
   };
-  console.log(displayName);
   const db = getFirestore();
   const docRef = doc(db, "datas", id);
 
