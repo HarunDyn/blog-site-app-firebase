@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 import { errorNote, warnNote } from "../helpers/toasNotify";
 import { doc, getFirestore, updateDoc } from "firebase/firestore";
+import Loading from "./Loading";
 
 // <CardActions>
 //   <Button size="small">Learn More</Button>
@@ -37,7 +38,7 @@ export default function CardComp({ item }) {
   } = {
     ...item,
   };
-
+  console.log(displayName);
   const db = getFirestore();
   const docRef = doc(db, "datas", id);
 
@@ -62,7 +63,7 @@ export default function CardComp({ item }) {
     }
   }, [like, currentUser]);
 
-  return (
+  return displayName ? (
     <Card
       sx={{
         width: "22rem",
@@ -75,7 +76,7 @@ export default function CardComp({ item }) {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: common.black }} aria-label="recipe">
-            {displayName}
+            {displayName.length > 2 ? displayName[0] : displayName}
           </Avatar>
         }
         title={title}
@@ -160,5 +161,7 @@ export default function CardComp({ item }) {
         {countComment}
       </CardActions>
     </Card>
+  ) : (
+    <Loading />
   );
 }

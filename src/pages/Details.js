@@ -71,7 +71,6 @@ export default function Details(props) {
     };
 
     color();
-    console.log(value);
   }, [data, currentUser, value, currentId]);
 
   return value ? (
@@ -96,7 +95,9 @@ export default function Details(props) {
           <CardHeader
             avatar={
               <Avatar sx={{ bgcolor: common.black }} aria-label="recipe">
-                {value.displayName}
+                {value.displayName.length > 2
+                  ? value.displayName[0]
+                  : value.displayName}
               </Avatar>
             }
             title={value.title}

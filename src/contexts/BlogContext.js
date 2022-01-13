@@ -15,6 +15,7 @@ export const colRef = collection(db, "datas");
 const BlogContextProvider = (props) => {
   const [data, setData] = useState([]);
   const [google, setGoogle] = useState(false);
+  // const [value, setValue] = useState([]);
   let value;
   // realTime collection data
   useEffect(() => {

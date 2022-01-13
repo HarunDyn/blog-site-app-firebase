@@ -14,7 +14,6 @@ function Dashboard() {
 
   return value ? (
     <Box
-      component="grid"
       sx={{
         width: "95vw",
         display: "flex",
