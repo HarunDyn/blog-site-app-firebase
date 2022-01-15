@@ -104,7 +104,7 @@ const ResponsiveAppBar = () => {
                 <Avatar alt="Harun Dayan" sx={{ bgcolor: green[700] }}>
                   {!currentUser ? (
                     <AccountCircleIcon />
-                  ) : currentUser.displayName.lenght > 2 ? (
+                  ) : currentUser.displayName > 2 ? (
                     currentUser.displayName[0]
                   ) : currentUser ? (
                     currentUser.displayName
