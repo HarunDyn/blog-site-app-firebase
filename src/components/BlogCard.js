@@ -55,17 +55,22 @@ export default function CardComp({ item }) {
   };
 
   React.useEffect(() => {
-    if (currentUser && like.includes(currentUser.email)) {
+    if (displayName && currentUser && like.includes(currentUser.email)) {
       likeButton.current.style.color = "red";
-    } else {
+    } else if (
+      displayName &&
+      currentUser &&
+      !like.includes(currentUser.email)
+    ) {
+      console.log(likeButton);
       likeButton.current.style.color = "grey";
     }
-  }, [like, currentUser]);
+  }, [like, displayName, currentUser, likeButton]);
 
   return displayName ? (
     <Card
       sx={{
-        width: "22rem",
+        width: "24rem",
         boxShadow: "3px 3px 7px black",
         position: "relative",
         mb: "2rem",

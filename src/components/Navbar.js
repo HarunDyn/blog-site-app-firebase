@@ -87,11 +87,11 @@ const ResponsiveAppBar = () => {
             onClick={() => navigate("/")}
           >
             <img
-              src={`https://www.onblastblog.com/wp-content/uploads/2017/08/blogger-logo-624x357.jpg`}
+              src={`https://image.freepik.com/vektoren-kostenlos/blogging-spass-erstellung-von-inhalten-online-streaming-video-blog-junges-maedchen-das-selfie-fuer-soziales-netzwerk-macht-feedback-selbstfoerderungsstrategie-teilt-vektor-isolierte-konzeptmetapherillustration_335657-855.jpg`}
               alt={"blog"}
               loading="lazy"
               style={{
-                width: "8rem",
+                width: "4rem",
                 // borderRadius: "50%",
                 cursor: "pointer",
               }}
