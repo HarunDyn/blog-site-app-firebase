@@ -1,7 +1,6 @@
 # Getting Started with Create React App
 live site : https://hd-fireblog.netlify.app/
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+![blog-app-hd](https://github.com/HarunDyn/blog-site-app-firebase/blob/main/blog-app-hd.gif)
 ## Available Scripts
 
 In the project directory, you can run:
